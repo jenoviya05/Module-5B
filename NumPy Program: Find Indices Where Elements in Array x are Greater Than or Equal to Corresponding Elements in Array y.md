@@ -1,21 +1,29 @@
-# # NumPy Program: Find Indices Where Elements in Array x are Greater Than or Equal to Corresponding Elements in Array y
+## Dictionary Operations in Python: Merging Two Dictionaries
 
 ## 🎯 Aim
-To write a Python program using **NumPy** that finds the indices where elements in array `x` are greater than or equal to their corresponding elements in array `y`.
+To write a Python program that merges **two dictionaries** and combines their key-value pairs.
 
 ## 🧠 Algorithm
-1. **Import NumPy**: Import the NumPy library.
-2. **Define Arrays**: Define two NumPy arrays, `x` and `y`, with the same shape (i.e., same number of elements).
-3. **Use Boolean Indexing**: 
-   - `x > y` gives a boolean array where elements of `x` are greater than `y`.
-   - `x == y` gives a boolean array where elements of `x` are equal to `y`.
-4. **Find Indices**: Use `np.where()` to get the indices where the conditions `x >= y` are satisfied.
-5. **Print Indices**: Print the indices where the condition holds true.
+1. Define two dictionaries `dict1` and `dict2` with some key-value pairs.
+2. Define a function `merge()` that merges the two dictionaries using the `**` unpacking operator.
+   - The merged result will combine keys from both dictionaries. If a key exists in both, the value from `dict2` will overwrite that from `dict1`.
+3. Call the `merge()` function and print the merged dictionary.
 
 ## 🧾 Program
+```
+dict1 = {'a': 10, 'b': 20, 'c': 30}
+dict2 = {'d': 40, 'e': 50, 'f': 60}
 
-Add code here
+def merge(d1, d2):
+    return {**d1, **d2}
+
+result = merge(dict1, dict2)
+
+print("Merged Dictionary:", result)
+```
 
 ## Output
+<img width="649" height="43" alt="image" src="https://github.com/user-attachments/assets/1765d53d-798f-4792-9b65-a42208fbfa85" />
 
 ## Result
+Thus, the Python program to merge two dictionaries and combine their key-value pairs was executed successfully and the output was verified.
