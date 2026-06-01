@@ -1,30 +1,35 @@
-# Classes and Objects in Python: Calculate the Area of a Circle
+# NumPy Program: Column-wise Sorting of a 2D Array
 
 ## 🎯 Aim
-To write a Python program that calculates the **area of a circle** based on the radius provided by the user. This program uses a class named `cse` and a method `mech` to perform the calculation.
+To write a **NumPy** program that sorts the elements in each column of a given 2D array in ascending order.
 
 ## 🧠 Algorithm
-1. **Get user input**: Take the radius of the circle as input from the user.
-2. **Define the class**: Create a class named `cse`.
-3. **Define the method**: Inside the class, define the method `mech` to calculate the area of the circle using the formula:  
-   Area = pi *r^2 
-4. **Execute the program**: Create an object of the class and call the method with the radius value.
+
+1. **Import NumPy**: Start by importing the NumPy library.
+2. **Get Input**: Accept a 2D NumPy array from the user.
+3. **Sort Column-wise**: Use the `np.sort()` function with `axis=0` to sort each column in ascending order.
+4. **Store Result**: Store the sorted result in a new array.
+5. **Display Output**: Print the original array and the column-wise sorted array.
 
 ## 🧾 Program
 ```
-class cse:
-    def mech(self, r):
-        area = 3.14 * r * r
-        print("Area of Circle:", area)
+import numpy as np
 
-radius = float(input("Enter radius: "))
+arr = np.array([[9, 3, 5],
+                [2, 8, 1],
+                [7, 4, 6]])
 
-obj = cse()
-obj.mech(radius)
+sorted_arr = np.sort(arr, axis=0)
+
+print("Original Array:")
+print(arr)
+
+print("Column-wise Sorted Array:")
+print(sorted_arr)
 ```
 
 ## Output
-<img width="220" height="69" alt="image" src="https://github.com/user-attachments/assets/c3e5d988-1b6d-46a2-b2cb-81c23ed0b7ba" />
+<img width="285" height="240" alt="image" src="https://github.com/user-attachments/assets/b1765b7b-81a0-4472-b1a8-07d02f91fe63" />
 
 ## Result
-Thus, the Python program to calculate the area of a circle using a class cse and method mech was executed successfully and the output was verified.
+Thus, the NumPy program to sort the elements in each column of a given 2D array in ascending order was executed successfully and the output was verified.
